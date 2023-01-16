@@ -1,0 +1,16 @@
+def meters_to(unity, meters)
+  case unity
+  when :miles
+    (meters/1000,0) / 1.609 # uma milha corresponde a 1.609 km
+  when :yard
+    meters / 0.914          # uma jarda corresponde a 0,914 metros
+  when :inch
+    (meters *100) / 2.54    # uma polegada correesponde a 2.54 centimetros
+  when :foot
+    meters /0.3048          # um pe corresponde a 0.3048 metros
+  else
+    "unidade desconhecida" 
+  end
+end
+
+puts meters_to(:foot, 1)
